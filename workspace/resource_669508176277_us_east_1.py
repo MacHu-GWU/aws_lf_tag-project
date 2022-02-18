@@ -1,0 +1,716 @@
+# -*- coding: utf-8 -*-
+
+from aws_lf_tag import Database, Table, Column
+
+
+account_id = "669508176277"
+region = "us-east-1"
+
+
+
+db_669508176277__us_east_1__datalab_vm = Database(account_id=account_id, region=region, name="datalab_vm")
+
+
+tb_669508176277__us_east_1__datalab_vm__arrangement = Table(name="arrangement", database=db_669508176277__us_east_1__datalab_vm)
+
+
+col_669508176277__us_east_1__datalab_vm__arrangement__arrangement_id = Column(name="arrangement_id", table=tb_669508176277__us_east_1__datalab_vm__arrangement)
+
+col_669508176277__us_east_1__datalab_vm__arrangement__date = Column(name="date", table=tb_669508176277__us_east_1__datalab_vm__arrangement)
+
+col_669508176277__us_east_1__datalab_vm__arrangement__arrangement_value = Column(name="arrangement_value", table=tb_669508176277__us_east_1__datalab_vm__arrangement)
+
+
+
+tb_669508176277__us_east_1__datalab_vm__asso = Table(name="asso", database=db_669508176277__us_east_1__datalab_vm)
+
+
+col_669508176277__us_east_1__datalab_vm__asso__arrangement_id = Column(name="arrangement_id", table=tb_669508176277__us_east_1__datalab_vm__asso)
+
+col_669508176277__us_east_1__datalab_vm__asso__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__datalab_vm__asso)
+
+col_669508176277__us_east_1__datalab_vm__asso__date = Column(name="date", table=tb_669508176277__us_east_1__datalab_vm__asso)
+
+
+
+tb_669508176277__us_east_1__datalab_vm__fact = Table(name="fact", database=db_669508176277__us_east_1__datalab_vm)
+
+
+col_669508176277__us_east_1__datalab_vm__fact__date = Column(name="date", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact__arrangement_value = Column(name="arrangement_value", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact___dot_date = Column(name=".date", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact___dot_product_id = Column(name=".product_id", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact___dot_arrangement_id = Column(name=".arrangement_id", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+col_669508176277__us_east_1__datalab_vm__fact__arrangement_id = Column(name="arrangement_id", table=tb_669508176277__us_east_1__datalab_vm__fact)
+
+
+
+tb_669508176277__us_east_1__datalab_vm__my_product = Table(name="my_product", database=db_669508176277__us_east_1__datalab_vm)
+
+
+col_669508176277__us_east_1__datalab_vm__my_product__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__datalab_vm__my_product)
+
+
+
+tb_669508176277__us_east_1__datalab_vm__product = Table(name="product", database=db_669508176277__us_east_1__datalab_vm)
+
+
+col_669508176277__us_east_1__datalab_vm__product__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__datalab_vm__product)
+
+col_669508176277__us_east_1__datalab_vm__product__date = Column(name="date", table=tb_669508176277__us_east_1__datalab_vm__product)
+
+
+
+
+
+db_669508176277__us_east_1__debug_best_practice_poc = Database(account_id=account_id, region=region, name="debug_best_practice_poc")
+
+
+tb_669508176277__us_east_1__debug_best_practice_poc___ds_store = Table(name="_ds_store", database=db_669508176277__us_east_1__debug_best_practice_poc)
+
+
+
+
+tb_669508176277__us_east_1__debug_best_practice_poc__events = Table(name="events", database=db_669508176277__us_east_1__debug_best_practice_poc)
+
+
+col_669508176277__us_east_1__debug_best_practice_poc__events__id = Column(name="id", table=tb_669508176277__us_east_1__debug_best_practice_poc__events)
+
+col_669508176277__us_east_1__debug_best_practice_poc__events__time = Column(name="time", table=tb_669508176277__us_east_1__debug_best_practice_poc__events)
+
+col_669508176277__us_east_1__debug_best_practice_poc__events__value = Column(name="value", table=tb_669508176277__us_east_1__debug_best_practice_poc__events)
+
+
+
+tb_669508176277__us_east_1__debug_best_practice_poc__events_parquet = Table(name="events_parquet", database=db_669508176277__us_east_1__debug_best_practice_poc)
+
+
+col_669508176277__us_east_1__debug_best_practice_poc__events_parquet__value = Column(name="value", table=tb_669508176277__us_east_1__debug_best_practice_poc__events_parquet)
+
+col_669508176277__us_east_1__debug_best_practice_poc__events_parquet__time = Column(name="time", table=tb_669508176277__us_east_1__debug_best_practice_poc__events_parquet)
+
+col_669508176277__us_east_1__debug_best_practice_poc__events_parquet__id = Column(name="id", table=tb_669508176277__us_east_1__debug_best_practice_poc__events_parquet)
+
+
+
+
+
+db_669508176277__us_east_1__default = Database(account_id=account_id, region=region, name="default")
+
+
+tb_669508176277__us_east_1__default__many_parquet = Table(name="many_parquet", database=db_669508176277__us_east_1__default)
+
+
+col_669508176277__us_east_1__default__many_parquet__id = Column(name="id", table=tb_669508176277__us_east_1__default__many_parquet)
+
+col_669508176277__us_east_1__default__many_parquet__time = Column(name="time", table=tb_669508176277__us_east_1__default__many_parquet)
+
+col_669508176277__us_east_1__default__many_parquet__text = Column(name="text", table=tb_669508176277__us_east_1__default__many_parquet)
+
+
+
+
+
+db_669508176277__us_east_1__glue_crawler_poc = Database(account_id=account_id, region=region, name="glue_crawler_poc")
+
+
+tb_669508176277__us_east_1__glue_crawler_poc__accounts = Table(name="accounts", database=db_669508176277__us_east_1__glue_crawler_poc)
+
+
+col_669508176277__us_east_1__glue_crawler_poc__accounts__acc = Column(name="acc", table=tb_669508176277__us_east_1__glue_crawler_poc__accounts)
+
+col_669508176277__us_east_1__glue_crawler_poc__accounts__balance = Column(name="balance", table=tb_669508176277__us_east_1__glue_crawler_poc__accounts)
+
+
+
+tb_669508176277__us_east_1__glue_crawler_poc__comments = Table(name="comments", database=db_669508176277__us_east_1__glue_crawler_poc)
+
+
+col_669508176277__us_east_1__glue_crawler_poc__comments__int_1 = Column(name="int_1", table=tb_669508176277__us_east_1__glue_crawler_poc__comments)
+
+col_669508176277__us_east_1__glue_crawler_poc__comments__str_1 = Column(name="str_1", table=tb_669508176277__us_east_1__glue_crawler_poc__comments)
+
+col_669508176277__us_east_1__glue_crawler_poc__comments__int_2 = Column(name="int_2", table=tb_669508176277__us_east_1__glue_crawler_poc__comments)
+
+col_669508176277__us_east_1__glue_crawler_poc__comments__str_2 = Column(name="str_2", table=tb_669508176277__us_east_1__glue_crawler_poc__comments)
+
+col_669508176277__us_east_1__glue_crawler_poc__comments__int_with_null = Column(name="int_with_null", table=tb_669508176277__us_east_1__glue_crawler_poc__comments)
+
+
+
+
+
+db_669508176277__us_east_1__glue_etl_job_poc = Database(account_id=account_id, region=region, name="glue_etl_job_poc")
+
+
+tb_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab = Table(name="2021_11_15_virginmoney_build_lab", database=db_669508176277__us_east_1__glue_etl_job_poc)
+
+
+col_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab__arrangement_id = Column(name="arrangement_id", table=tb_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab)
+
+col_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab__date = Column(name="date", table=tb_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab)
+
+col_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab__arrangement_value = Column(name="arrangement_value", table=tb_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab)
+
+col_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__glue_etl_job_poc__2021_11_15_virginmoney_build_lab)
+
+
+
+tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str = Table(name="all_column_is_str", database=db_669508176277__us_east_1__glue_etl_job_poc)
+
+
+col_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str__a_int = Column(name="a_int", table=tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str)
+
+col_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str__a_float = Column(name="a_float", table=tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str)
+
+col_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str__a_bool = Column(name="a_bool", table=tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str)
+
+col_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str__a_int_with_null = Column(name="a_int_with_null", table=tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str)
+
+col_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str__a_float_with_null = Column(name="a_float_with_null", table=tb_669508176277__us_east_1__glue_etl_job_poc__all_column_is_str)
+
+
+
+tb_669508176277__us_east_1__glue_etl_job_poc__comments = Table(name="comments", database=db_669508176277__us_east_1__glue_etl_job_poc)
+
+
+col_669508176277__us_east_1__glue_etl_job_poc__comments__post_id = Column(name="post_id", table=tb_669508176277__us_east_1__glue_etl_job_poc__comments)
+
+col_669508176277__us_east_1__glue_etl_job_poc__comments__title = Column(name="title", table=tb_669508176277__us_east_1__glue_etl_job_poc__comments)
+
+col_669508176277__us_east_1__glue_etl_job_poc__comments__content = Column(name="content", table=tb_669508176277__us_east_1__glue_etl_job_poc__comments)
+
+col_669508176277__us_east_1__glue_etl_job_poc__comments__thumb_up = Column(name="thumb_up", table=tb_669508176277__us_east_1__glue_etl_job_poc__comments)
+
+
+
+tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes = Table(name="mixed_datatypes", database=db_669508176277__us_east_1__glue_etl_job_poc)
+
+
+col_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes__a_int = Column(name="a_int", table=tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes)
+
+col_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes__a_str = Column(name="a_str", table=tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes)
+
+col_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes__a_float = Column(name="a_float", table=tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes)
+
+col_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes__a_datetime = Column(name="a_datetime", table=tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes)
+
+col_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes__a_bool = Column(name="a_bool", table=tb_669508176277__us_east_1__glue_etl_job_poc__mixed_datatypes)
+
+
+
+
+
+db_669508176277__us_east_1__gluetransform = Database(account_id=account_id, region=region, name="gluetransform")
+
+
+tb_669508176277__us_east_1__gluetransform__posts = Table(name="posts", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__posts__post_id = Column(name="post_id", table=tb_669508176277__us_east_1__gluetransform__posts)
+
+col_669508176277__us_east_1__gluetransform__posts__author_id = Column(name="author_id", table=tb_669508176277__us_east_1__gluetransform__posts)
+
+
+
+tb_669508176277__us_east_1__gluetransform__posts_and_tags = Table(name="posts_and_tags", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__posts_and_tags__post_id = Column(name="post_id", table=tb_669508176277__us_east_1__gluetransform__posts_and_tags)
+
+col_669508176277__us_east_1__gluetransform__posts_and_tags__tag_id = Column(name="tag_id", table=tb_669508176277__us_east_1__gluetransform__posts_and_tags)
+
+
+
+tb_669508176277__us_east_1__gluetransform__posts_denormalized = Table(name="posts_denormalized", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__posts_denormalized__author_id = Column(name="author_id", table=tb_669508176277__us_east_1__gluetransform__posts_denormalized)
+
+col_669508176277__us_east_1__gluetransform__posts_denormalized__author_name = Column(name="author_name", table=tb_669508176277__us_east_1__gluetransform__posts_denormalized)
+
+col_669508176277__us_east_1__gluetransform__posts_denormalized__post_id = Column(name="post_id", table=tb_669508176277__us_east_1__gluetransform__posts_denormalized)
+
+col_669508176277__us_east_1__gluetransform__posts_denormalized__tag_id = Column(name="tag_id", table=tb_669508176277__us_east_1__gluetransform__posts_denormalized)
+
+col_669508176277__us_east_1__gluetransform__posts_denormalized__tag_title = Column(name="tag_title", table=tb_669508176277__us_east_1__gluetransform__posts_denormalized)
+
+
+
+tb_669508176277__us_east_1__gluetransform__raw_record = Table(name="raw_record", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_int = Column(name="a_int", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_float = Column(name="a_float", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_str = Column(name="a_str", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_str_array = Column(name="a_str_array", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_struct_array = Column(name="a_struct_array", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_datetime_str = Column(name="a_datetime_str", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+col_669508176277__us_east_1__gluetransform__raw_record__a_datetime_int = Column(name="a_datetime_int", table=tb_669508176277__us_east_1__gluetransform__raw_record)
+
+
+
+tb_669508176277__us_east_1__gluetransform__tags = Table(name="tags", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__tags__tag_id = Column(name="tag_id", table=tb_669508176277__us_east_1__gluetransform__tags)
+
+col_669508176277__us_east_1__gluetransform__tags__tag_title = Column(name="tag_title", table=tb_669508176277__us_east_1__gluetransform__tags)
+
+
+
+tb_669508176277__us_east_1__gluetransform__users = Table(name="users", database=db_669508176277__us_east_1__gluetransform)
+
+
+col_669508176277__us_east_1__gluetransform__users__user_id = Column(name="user_id", table=tb_669508176277__us_east_1__gluetransform__users)
+
+col_669508176277__us_east_1__gluetransform__users__name = Column(name="name", table=tb_669508176277__us_east_1__gluetransform__users)
+
+
+
+
+
+db_669508176277__us_east_1__lakeformation_access_control_demo = Database(account_id=account_id, region=region, name="lakeformation_access_control_demo")
+
+
+tb_669508176277__us_east_1__lakeformation_access_control_demo__items = Table(name="items", database=db_669508176277__us_east_1__lakeformation_access_control_demo)
+
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__items__item_id = Column(name="item_id", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__items)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__items__item_name = Column(name="item_name", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__items)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__items__price = Column(name="price", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__items)
+
+
+
+tb_669508176277__us_east_1__lakeformation_access_control_demo__orders = Table(name="orders", database=db_669508176277__us_east_1__lakeformation_access_control_demo)
+
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__orders__order_id = Column(name="order_id", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__orders)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__orders__buyer_id = Column(name="buyer_id", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__orders)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__orders__items = Column(name="items", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__orders)
+
+
+
+tb_669508176277__us_east_1__lakeformation_access_control_demo__users = Table(name="users", database=db_669508176277__us_east_1__lakeformation_access_control_demo)
+
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__users__user_id = Column(name="user_id", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__users)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__users__email = Column(name="email", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__users)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__users__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__users)
+
+col_669508176277__us_east_1__lakeformation_access_control_demo__users__confidential = Column(name="confidential", table=tb_669508176277__us_east_1__lakeformation_access_control_demo__users)
+
+
+
+
+
+db_669508176277__us_east_1__legislators = Database(account_id=account_id, region=region, name="legislators")
+
+
+tb_669508176277__us_east_1__legislators__areas_json = Table(name="areas_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__areas_json__type = Column(name="type", table=tb_669508176277__us_east_1__legislators__areas_json)
+
+col_669508176277__us_east_1__legislators__areas_json__id = Column(name="id", table=tb_669508176277__us_east_1__legislators__areas_json)
+
+col_669508176277__us_east_1__legislators__areas_json__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__areas_json)
+
+col_669508176277__us_east_1__legislators__areas_json__identifiers = Column(name="identifiers", table=tb_669508176277__us_east_1__legislators__areas_json)
+
+col_669508176277__us_east_1__legislators__areas_json__other_names = Column(name="other_names", table=tb_669508176277__us_east_1__legislators__areas_json)
+
+
+
+tb_669508176277__us_east_1__legislators__countries_json = Table(name="countries_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__countries_json__country = Column(name="country", table=tb_669508176277__us_east_1__legislators__countries_json)
+
+col_669508176277__us_east_1__legislators__countries_json__code = Column(name="code", table=tb_669508176277__us_east_1__legislators__countries_json)
+
+col_669508176277__us_east_1__legislators__countries_json__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__countries_json)
+
+col_669508176277__us_east_1__legislators__countries_json__legislatures = Column(name="legislatures", table=tb_669508176277__us_east_1__legislators__countries_json)
+
+col_669508176277__us_east_1__legislators__countries_json__slug = Column(name="slug", table=tb_669508176277__us_east_1__legislators__countries_json)
+
+
+
+tb_669508176277__us_east_1__legislators__events_json = Table(name="events_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__events_json__classification = Column(name="classification", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__end_date = Column(name="end_date", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__identifiers = Column(name="identifiers", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__id = Column(name="id", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__start_date = Column(name="start_date", table=tb_669508176277__us_east_1__legislators__events_json)
+
+col_669508176277__us_east_1__legislators__events_json__organization_id = Column(name="organization_id", table=tb_669508176277__us_east_1__legislators__events_json)
+
+
+
+tb_669508176277__us_east_1__legislators__memberships_json = Table(name="memberships_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__memberships_json__area_id = Column(name="area_id", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__on_behalf_of_id = Column(name="on_behalf_of_id", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__organization_id = Column(name="organization_id", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__role = Column(name="role", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__person_id = Column(name="person_id", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__legislative_period_id = Column(name="legislative_period_id", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__start_date = Column(name="start_date", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+col_669508176277__us_east_1__legislators__memberships_json__end_date = Column(name="end_date", table=tb_669508176277__us_east_1__legislators__memberships_json)
+
+
+
+tb_669508176277__us_east_1__legislators__organizations_json = Table(name="organizations_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__organizations_json__identifiers = Column(name="identifiers", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__other_names = Column(name="other_names", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__id = Column(name="id", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__classification = Column(name="classification", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__links = Column(name="links", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__image = Column(name="image", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__seats = Column(name="seats", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+col_669508176277__us_east_1__legislators__organizations_json__type = Column(name="type", table=tb_669508176277__us_east_1__legislators__organizations_json)
+
+
+
+tb_669508176277__us_east_1__legislators__person = Table(name="person", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__person__family_name = Column(name="family_name", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__links = Column(name="links", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__gender = Column(name="gender", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__image = Column(name="image", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__identifiers = Column(name="identifiers", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__other_names = Column(name="other_names", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__sort_name = Column(name="sort_name", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__images = Column(name="images", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__given_name = Column(name="given_name", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__birth_date = Column(name="birth_date", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__id = Column(name="id", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__contact_details = Column(name="contact_details", table=tb_669508176277__us_east_1__legislators__person)
+
+col_669508176277__us_east_1__legislators__person__death_date = Column(name="death_date", table=tb_669508176277__us_east_1__legislators__person)
+
+
+
+tb_669508176277__us_east_1__legislators__persons_json = Table(name="persons_json", database=db_669508176277__us_east_1__legislators)
+
+
+col_669508176277__us_east_1__legislators__persons_json__family_name = Column(name="family_name", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__name = Column(name="name", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__links = Column(name="links", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__gender = Column(name="gender", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__image = Column(name="image", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__identifiers = Column(name="identifiers", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__other_names = Column(name="other_names", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__sort_name = Column(name="sort_name", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__images = Column(name="images", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__given_name = Column(name="given_name", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__birth_date = Column(name="birth_date", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__id = Column(name="id", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__contact_details = Column(name="contact_details", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+col_669508176277__us_east_1__legislators__persons_json__death_date = Column(name="death_date", table=tb_669508176277__us_east_1__legislators__persons_json)
+
+
+
+
+
+db_669508176277__us_east_1__lf_data_location_poc = Database(account_id=account_id, region=region, name="lf_data_location_poc")
+
+
+tb_669508176277__us_east_1__lf_data_location_poc__items = Table(name="items", database=db_669508176277__us_east_1__lf_data_location_poc)
+
+
+col_669508176277__us_east_1__lf_data_location_poc__items__item_id = Column(name="item_id", table=tb_669508176277__us_east_1__lf_data_location_poc__items)
+
+col_669508176277__us_east_1__lf_data_location_poc__items__item_name = Column(name="item_name", table=tb_669508176277__us_east_1__lf_data_location_poc__items)
+
+col_669508176277__us_east_1__lf_data_location_poc__items__price = Column(name="price", table=tb_669508176277__us_east_1__lf_data_location_poc__items)
+
+
+
+tb_669508176277__us_east_1__lf_data_location_poc__orders = Table(name="orders", database=db_669508176277__us_east_1__lf_data_location_poc)
+
+
+col_669508176277__us_east_1__lf_data_location_poc__orders__order_id = Column(name="order_id", table=tb_669508176277__us_east_1__lf_data_location_poc__orders)
+
+col_669508176277__us_east_1__lf_data_location_poc__orders__buyer_id = Column(name="buyer_id", table=tb_669508176277__us_east_1__lf_data_location_poc__orders)
+
+col_669508176277__us_east_1__lf_data_location_poc__orders__items = Column(name="items", table=tb_669508176277__us_east_1__lf_data_location_poc__orders)
+
+
+
+tb_669508176277__us_east_1__lf_data_location_poc__users = Table(name="users", database=db_669508176277__us_east_1__lf_data_location_poc)
+
+
+col_669508176277__us_east_1__lf_data_location_poc__users__user_id = Column(name="user_id", table=tb_669508176277__us_east_1__lf_data_location_poc__users)
+
+col_669508176277__us_east_1__lf_data_location_poc__users__email = Column(name="email", table=tb_669508176277__us_east_1__lf_data_location_poc__users)
+
+col_669508176277__us_east_1__lf_data_location_poc__users__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__lf_data_location_poc__users)
+
+col_669508176277__us_east_1__lf_data_location_poc__users__type = Column(name="type", table=tb_669508176277__us_east_1__lf_data_location_poc__users)
+
+
+
+
+
+db_669508176277__us_east_1__lf_sme_demo_db = Database(account_id=account_id, region=region, name="lf_sme_demo_db")
+
+
+tb_669508176277__us_east_1__lf_sme_demo_db__items = Table(name="items", database=db_669508176277__us_east_1__lf_sme_demo_db)
+
+
+col_669508176277__us_east_1__lf_sme_demo_db__items__item_id = Column(name="item_id", table=tb_669508176277__us_east_1__lf_sme_demo_db__items)
+
+col_669508176277__us_east_1__lf_sme_demo_db__items__item_name = Column(name="item_name", table=tb_669508176277__us_east_1__lf_sme_demo_db__items)
+
+col_669508176277__us_east_1__lf_sme_demo_db__items__price = Column(name="price", table=tb_669508176277__us_east_1__lf_sme_demo_db__items)
+
+
+
+tb_669508176277__us_east_1__lf_sme_demo_db__orders = Table(name="orders", database=db_669508176277__us_east_1__lf_sme_demo_db)
+
+
+col_669508176277__us_east_1__lf_sme_demo_db__orders__order_id = Column(name="order_id", table=tb_669508176277__us_east_1__lf_sme_demo_db__orders)
+
+col_669508176277__us_east_1__lf_sme_demo_db__orders__buyer_id = Column(name="buyer_id", table=tb_669508176277__us_east_1__lf_sme_demo_db__orders)
+
+col_669508176277__us_east_1__lf_sme_demo_db__orders__items = Column(name="items", table=tb_669508176277__us_east_1__lf_sme_demo_db__orders)
+
+
+
+tb_669508176277__us_east_1__lf_sme_demo_db__users = Table(name="users", database=db_669508176277__us_east_1__lf_sme_demo_db)
+
+
+col_669508176277__us_east_1__lf_sme_demo_db__users__user_id = Column(name="user_id", table=tb_669508176277__us_east_1__lf_sme_demo_db__users)
+
+col_669508176277__us_east_1__lf_sme_demo_db__users__email = Column(name="email", table=tb_669508176277__us_east_1__lf_sme_demo_db__users)
+
+col_669508176277__us_east_1__lf_sme_demo_db__users__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__lf_sme_demo_db__users)
+
+col_669508176277__us_east_1__lf_sme_demo_db__users__confidential = Column(name="confidential", table=tb_669508176277__us_east_1__lf_sme_demo_db__users)
+
+
+
+
+
+db_669508176277__us_east_1__multi_stage_etl_poc = Database(account_id=account_id, region=region, name="multi_stage_etl_poc")
+
+
+tb_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts = Table(name="datalake_bank_accounts", database=db_669508176277__us_east_1__multi_stage_etl_poc)
+
+
+col_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts__acc = Column(name="acc", table=tb_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts__create_time = Column(name="create_time", table=tb_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts__status = Column(name="status", table=tb_669508176277__us_east_1__multi_stage_etl_poc__datalake_bank_accounts)
+
+
+
+tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts = Table(name="landing_bank_accounts", database=db_669508176277__us_east_1__multi_stage_etl_poc)
+
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts__acc = Column(name="acc", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts__create_time = Column(name="create_time", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts__status = Column(name="status", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_accounts)
+
+
+
+tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions = Table(name="landing_bank_transactions", database=db_669508176277__us_east_1__multi_stage_etl_poc)
+
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions__trans_id = Column(name="trans_id", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions__time = Column(name="time", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions__from_acc = Column(name="from_acc", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions__to_acc = Column(name="to_acc", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions__amount = Column(name="amount", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_bank_transactions)
+
+
+
+tb_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews = Table(name="landing_product_reviews", database=db_669508176277__us_east_1__multi_stage_etl_poc)
+
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews__product_id = Column(name="product_id", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews__user_id = Column(name="user_id", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews__message = Column(name="message", table=tb_669508176277__us_east_1__multi_stage_etl_poc__landing_product_reviews)
+
+
+
+tb_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts = Table(name="staging_bank_accounts", database=db_669508176277__us_east_1__multi_stage_etl_poc)
+
+
+col_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts__acc = Column(name="acc", table=tb_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts__ssn = Column(name="ssn", table=tb_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts__create_time = Column(name="create_time", table=tb_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts)
+
+col_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts__status = Column(name="status", table=tb_669508176277__us_east_1__multi_stage_etl_poc__staging_bank_accounts)
+
+
+
+
+
+db_669508176277__us_east_1__multi_step_glue_etl = Database(account_id=account_id, region=region, name="multi_step_glue_etl")
+
+
+tb_669508176277__us_east_1__multi_step_glue_etl__step0 = Table(name="step0", database=db_669508176277__us_east_1__multi_step_glue_etl)
+
+
+col_669508176277__us_east_1__multi_step_glue_etl__step0__account = Column(name="account", table=tb_669508176277__us_east_1__multi_step_glue_etl__step0)
+
+col_669508176277__us_east_1__multi_step_glue_etl__step0__balance = Column(name="balance", table=tb_669508176277__us_east_1__multi_step_glue_etl__step0)
+
+
+
+
+
+db_669508176277__us_east_1__sampledb = Database(account_id=account_id, region=region, name="sampledb")
+
+
+tb_669508176277__us_east_1__sampledb__elb_logs = Table(name="elb_logs", database=db_669508176277__us_east_1__sampledb)
+
+
+col_669508176277__us_east_1__sampledb__elb_logs__request_timestamp = Column(name="request_timestamp", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__elb_name = Column(name="elb_name", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__request_ip = Column(name="request_ip", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__request_port = Column(name="request_port", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__backend_ip = Column(name="backend_ip", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__backend_port = Column(name="backend_port", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__request_processing_time = Column(name="request_processing_time", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__backend_processing_time = Column(name="backend_processing_time", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__client_response_time = Column(name="client_response_time", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__elb_response_code = Column(name="elb_response_code", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__backend_response_code = Column(name="backend_response_code", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__received_bytes = Column(name="received_bytes", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__sent_bytes = Column(name="sent_bytes", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__request_verb = Column(name="request_verb", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__url = Column(name="url", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__protocol = Column(name="protocol", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__user_agent = Column(name="user_agent", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__ssl_cipher = Column(name="ssl_cipher", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+col_669508176277__us_east_1__sampledb__elb_logs__ssl_protocol = Column(name="ssl_protocol", table=tb_669508176277__us_east_1__sampledb__elb_logs)
+
+
+
+
+
+db_669508176277__us_east_1__simple_json_to_parquet = Database(account_id=account_id, region=region, name="simple_json_to_parquet")
+
+
+tb_669508176277__us_east_1__simple_json_to_parquet__measurement_raw = Table(name="measurement_raw", database=db_669508176277__us_east_1__simple_json_to_parquet)
+
+
+col_669508176277__us_east_1__simple_json_to_parquet__measurement_raw__device_id = Column(name="device_id", table=tb_669508176277__us_east_1__simple_json_to_parquet__measurement_raw)
+
+col_669508176277__us_east_1__simple_json_to_parquet__measurement_raw__observation_time = Column(name="observation_time", table=tb_669508176277__us_east_1__simple_json_to_parquet__measurement_raw)
+
+col_669508176277__us_east_1__simple_json_to_parquet__measurement_raw__value = Column(name="value", table=tb_669508176277__us_east_1__simple_json_to_parquet__measurement_raw)
+
+
+
+

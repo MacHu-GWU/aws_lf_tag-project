@@ -21,32 +21,35 @@ from .core import (
     Table,
     Column,
     PermissionEnum,
+    Permission,
     Tag,
     Playbook,
 )
 from .gen_code import gen_resource, gen_principal
 
-CreateTable = PermissionEnum.CreateTable.value
-AlterDatabase = PermissionEnum.AlterDatabase.value
-DropDatabase = PermissionEnum.DropDatabase.value
-DescribeDatabase = PermissionEnum.DescribeDatabase.value
-SuperDatabase = PermissionEnum.SuperDatabase.value
-CreateTableGrantable = PermissionEnum.CreateTableGrantable.value
-AlterDatabaseGrantable = PermissionEnum.AlterDatabaseGrantable.value
-DropDatabaseGrantable = PermissionEnum.DropDatabaseGrantable.value
-DescribeDatabaseGrantable = PermissionEnum.DescribeDatabaseGrantable.value
-SuperDatabaseGrantable = PermissionEnum.SuperDatabaseGrantable.value
-Select = PermissionEnum.Select.value
-Insert = PermissionEnum.Insert.value
-Delete = PermissionEnum.Delete.value
-DescribeTable = PermissionEnum.DescribeTable.value
-AlterTable = PermissionEnum.AlterTable.value
-DropTable = PermissionEnum.DropTable.value
-SuperTable = PermissionEnum.SuperTable.value
-SelectGrantable = PermissionEnum.SelectGrantable.value
-InsertGrantable = PermissionEnum.InsertGrantable.value
-DeleteGrantable = PermissionEnum.DeleteGrantable.value
-DescribeTableGrantable = PermissionEnum.DescribeTableGrantable.value
-AlterTableGrantable = PermissionEnum.AlterTableGrantable.value
-DropTableGrantable = PermissionEnum.DropTableGrantable.value
-SuperTableGrantable = PermissionEnum.SuperTableGrantable.value
+CreateDatabase: Permission = PermissionEnum.CreateDatabase.value
+AlterDatabase: Permission = PermissionEnum.AlterDatabase.value
+DropDatabase: Permission = PermissionEnum.DropDatabase.value
+DescribeDatabase: Permission = PermissionEnum.DescribeDatabase.value
+SuperDatabase: Permission = PermissionEnum.SuperDatabase.value
+CreateTable: Permission = PermissionEnum.CreateTable.value
+CreateDatabaseGrantable: Permission = PermissionEnum.CreateDatabaseGrantable.value
+AlterDatabaseGrantable: Permission = PermissionEnum.AlterDatabaseGrantable.value
+DropDatabaseGrantable: Permission = PermissionEnum.DropDatabaseGrantable.value
+DescribeDatabaseGrantable: Permission = PermissionEnum.DescribeDatabaseGrantable.value
+SuperDatabaseGrantable: Permission = PermissionEnum.SuperDatabaseGrantable.value
+CreateTableGrantable: Permission = PermissionEnum.CreateTableGrantable.value
+Select: Permission = PermissionEnum.Select.value
+Insert: Permission = PermissionEnum.Insert.value
+Delete: Permission = PermissionEnum.Delete.value
+DescribeTable: Permission = PermissionEnum.DescribeTable.value
+AlterTable: Permission = PermissionEnum.AlterTable.value
+DropTable: Permission = PermissionEnum.DropTable.value
+SuperTable: Permission = PermissionEnum.SuperTable.value
+SelectGrantable: Permission = PermissionEnum.SelectGrantable.value
+InsertGrantable: Permission = PermissionEnum.InsertGrantable.value
+DeleteGrantable: Permission = PermissionEnum.DeleteGrantable.value
+DescribeTableGrantable: Permission = PermissionEnum.DescribeTableGrantable.value
+AlterTableGrantable: Permission = PermissionEnum.AlterTableGrantable.value
+DropTableGrantable: Permission = PermissionEnum.DropTableGrantable.value
+SuperTableGrantable: Permission = PermissionEnum.SuperTableGrantable.value

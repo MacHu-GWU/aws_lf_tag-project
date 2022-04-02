@@ -58,6 +58,15 @@ class TestTag:
         tag1 = Tag.deserialize(tag.serialize())
         assert tag1 == tag
 
+        tag2 = Tag.deserialize(
+            dict(
+                key="Admin", value="y",
+                principal_attachments=[1, 2, 3],
+                resource_attachments=[1, 2, 3],
+            )
+        )
+        assert tag2 == tag
+
     def test_attach_to(self):
         assert len(tag_admin_y.principal_attachments) == 0
         tag_admin_y.attach_to_principal(ec2_iam_role, [PermissionEnum.DescribeTable.value])

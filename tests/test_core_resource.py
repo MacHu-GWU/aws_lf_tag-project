@@ -4,6 +4,7 @@ import pytest
 from aws_lf_tag.core import (
     Resource, Database, Table, Column,
 )
+from aws_lf_tag.tests import db, tb, col
 
 aws_profile = "my_aws_profile"
 aws_region = "us-east-1"
@@ -70,6 +71,12 @@ class TestColumn(BaseTest):
         }
         col = Column.deserialize(self.col.serialize())
         assert col == self.col
+
+
+def test():
+    assert(repr(db))
+    print(repr(tb))
+    print(repr(col))
 
 
 if __name__ == "__main__":

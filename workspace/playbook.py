@@ -17,12 +17,13 @@ pb = lf.Playbook(boto_ses=boto_ses, workspace_dir=dir_here.abspath)
 # Tag
 # ------------------------------------------------------------------------------
 prefix = "aws_lf_tag"
-tag_admin_access_y = lf.Tag(key=f"{prefix}_admin_access", value="y", pb=pb)
-tag_admin_access_n = lf.Tag(key=f"{prefix}_admin_access", value="n", pb=pb)
-tag_regular_access_y = lf.Tag(key=f"{prefix}_regular_access", value="y", pb=pb)
-tag_regular_access_n = lf.Tag(key=f"{prefix}_regular_access", value="n", pb=pb)
-tag_limited_access_y = lf.Tag(key=f"{prefix}_limited_access", value="y", pb=pb)
-tag_limited_access_n = lf.Tag(key=f"{prefix}_limited_access", value="n", pb=pb)
+
+# tag_admin_access_y = lf.Tag(key=f"{prefix}_admin_access", value="y", pb=pb)
+# tag_admin_access_n = lf.Tag(key=f"{prefix}_admin_access", value="n", pb=pb)
+# tag_regular_access_y = lf.Tag(key=f"{prefix}_regular_access", value="y", pb=pb)
+# tag_regular_access_n = lf.Tag(key=f"{prefix}_regular_access", value="n", pb=pb)
+# tag_limited_access_y = lf.Tag(key=f"{prefix}_limited_access", value="y", pb=pb)
+# tag_limited_access_n = lf.Tag(key=f"{prefix}_limited_access", value="n", pb=pb)
 
 # ------------------------------------------------------------------------------
 # Resource
@@ -32,17 +33,13 @@ tag_limited_access_n = lf.Tag(key=f"{prefix}_limited_access", value="n", pb=pb)
 # VScode / Sublime / PyCharm / Notepad ++ or any
 # to access a resource variable
 # ------------------------------------------------------------------------------
-# r.db_669508176277__us_west_1__lf_sme_demo_db.attach(tag_admin_access_y)
+# tag_admin_access_y.attach_to_resource(r.db_669508176277__us_west_1__lf_sme_demo_db)
 #
-# r.db_669508176277__us_west_1__lf_sme_demo_db.attach(tag_regular_access_y)
-# r.col_669508176277__us_west_1__lf_sme_demo_db__users__ssn.attach(tag_regular_access_n)
+# tag_regular_access_y.attach_to_resource(r.db_669508176277__us_west_1__lf_sme_demo_db)
+# tag_regular_access_n.attach_to_resource(r.col_669508176277__us_west_1__lf_sme_demo_db__users__ssn)
 #
-# r.db_669508176277__us_west_1__lf_sme_demo_db.attach(tag_limited_access_y)
-# r.tb_669508176277__us_west_1__lf_sme_demo_db__items.attach(tag_limited_access_n)
-# r.col_669508176277__us_west_1__lf_sme_demo_db__users__ssn.attach(tag_limited_access_n)
-# r.col_669508176277__us_west_1__lf_sme_demo_db__users__confidential.attach(tag_limited_access_n)
-
-# print(r.db_669508176277__us_west_1__lf_sme_demo_db.tags)
+# tag_limited_access_y.attach_to_resource(r.db_669508176277__us_west_1__lf_sme_demo_db)
+# tag_limited_access_n.attach_to_resource(r.tb_669508176277__us_west_1__lf_sme_demo_db__items)
 
 # ------------------------------------------------------------------------------
 # Principal
@@ -50,17 +47,15 @@ tag_limited_access_n = lf.Tag(key=f"{prefix}_limited_access", value="n", pb=pb)
 # all IAM user / role principal are automatically generated
 # same as resource, you can leverage text editor auto complete feature
 # ------------------------------------------------------------------------------
-# p.role_lf_sme_demo_admin.attach(tag_admin_access_y, permissions=[lf.SuperDatabase, lf.SuperTable])
-# p.role_lf_sme_demo_regular.attach(tag_regular_access_y, permissions=[lf.DescribeDatabase, lf.DescribeTable, lf.Select])
-# p.role_lf_sme_demo_limited.attach(tag_limited_access_y, permissions=[lf.DescribeDatabase, lf.DescribeTable, lf.Select])
+# tag_admin_access_y.attach_to_principal(p.role_lf_sme_demo_admin, permissions=[lf.SuperDatabase, lf.SuperDatabaseGrantable, lf.SuperTable, lf.SuperTableGrantable])
+# tag_regular_access_y.attach_to_principal(p.role_lf_sme_demo_regular, permissions=[lf.DescribeDatabase, lf.DescribeTable, lf.Select])
+# tag_limited_access_y.attach_to_principal(p.role_lf_sme_demo_limited, permissions=[lf.DescribeDatabase, lf.DescribeTable, lf.Select])
 
-# print(p.role_lf_sme_demo_admin.bindings)
-# print(pb.resources)
+
 # ------------------------------------------------------------------------------
 # Apply all change
 # ------------------------------------------------------------------------------
-# print(pb.resources)
-# data = pb.serialize()
+data = pb.serialize()
 # print(data)
-pb.apply()
+pb.apply(verbose=True, dry_run=False)
 # print(pb.region)

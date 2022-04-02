@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from typing import List, Dict
+import attr
+from attrs_mate import AttrsClass
 
 
 def is_tag_exists(
@@ -21,6 +23,44 @@ def is_tag_exists(
             return False
         else:
             raise e
+
+
+@attr.define
+class LFTag(AttrsClass):
+    CatalogId: str = AttrsClass.ib_str(nullable=False)
+    TagKey: str = AttrsClass.ib_str(nullable=False)
+    TagValues: List[str] = AttrsClass.ib_list_of_str(nullable=False)
+
+
+def list_tag(
+    lf_client,
+    catalog_id: str,
+    resource_share_type: str = "ALL",
+) -> Dict[str, LFTag]:
+    """
+    Call ``list_lf_tags`` api recursively to get all lakeformation tags.
+
+    Ref: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/lakeformation.html#LakeFormation.Client.list_lf_tags
+    """
+    next_token = None
+    tags: Dict[str, LFTag] = dict()
+    while 1:
+        kwargs = dict(
+            CatalogId=catalog_id,
+            ResourceShareType=resource_share_type,
+            MaxResults=1000,
+        )
+        if next_token:
+            kwargs["NextToken"] = next_token
+        res = lf_client.list_lf_tags(**kwargs)
+        for dct in res.get("LFTags", list()):
+            lf_tag = LFTag.from_dict(dct)
+            tags[lf_tag.TagKey] = lf_tag
+        next_token = res.get("NextToken")
+        if next_token is None:
+            break
+
+    return tags
 
 
 def create_tag(
